@@ -168,8 +168,8 @@ LIMIT 1;
 /*
 22.Visualiza los trabajadores que trabajan en la misma ciudad donde residen.
 */
-SELECT city_id, GROUP_CONCAT(address), COUNT(staff_id)
-FROM staff JOIN address USING(address_id)
+SELECT city_id, GROUP_CONCAT(address), COUNT(staff_id), staff_id
+FROM staff JOIN address USING(address_id) 
 GROUP BY city_id;
 
 /*
@@ -237,4 +237,5 @@ FROM customer JOIN payment USING(customer_id)
 WHERE amount>5;
 
 /*
-29.
+29.Obtén los actores que han trabajado en todas las películas en las que ha trabajado Christopher West.
+*/
